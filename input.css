@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .input-field{
+        @apply w-full h-10 border-2 rounded-lg focus:outline-none focus:border-blue-600 px-2;
+    }
+    .btn{
+        @apply px-3 rounded-md py-1 border text-slate-200;
+    }
+    .update-btn{
+        @apply  text-yellow-600 border-yellow-600;
+    }
+    .delete-btn{
+        @apply text-red-700 border-red-700;
+    }
+}

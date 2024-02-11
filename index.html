@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body>
+    <nav class="w-screen h-12 shadow">
+        <ul class="flex justify-around items-center h-full w-full text-slate-600 font-bold">
+            <H2>Product List</H2>
+        </ul>
+    </nav>
+    <main class="mx-24 my-8">
+        <section>
+            <div class="my-4">
+                <label class="block" for="productName">Product name: </label>
+                <input class="input-field" type="text" id="productName">
+            </div>
+            <div class="my-4">
+                <label class="block" for="productPrice">Product price: </label>
+                <input class="input-field" type="number" id="productPrice">
+            </div>
+            <div class="my-4">
+                <label class="block" for="productCategory">Product category: </label>
+                <input class="input-field" type="text" id="productCategory">
+            </div>
+            <div class="my-4">
+                <label class="block" for="productDescription">Product description: </label>
+                <textarea class="input-field h-min" id="productDescription" rows="4" ></textarea>
+            </div>
+            <button class="mb-4 font-bold btn bg-blue-600" onclick="addProduct();" class="btn btn-outline-info">add product</button>
+            <div class="w-full h-0.5 my-2 bg-slate-200"></div>
+        </section>
+        <section>
+                <input class="input-field" id="search" onkeyup="searchProduct(this.value);" class="w-75 form-control m-auto" placeholder="Search in products" type="text">
+                <table class="table-fixed min-w-full">
+                    <div class="hidden update-btn delete-btn"></div>
+                    <thead>
+                        <tr>
+                            <td>index</td>
+                            <td>Name</td>
+                            <td>Price</td>
+                            <td>Category</td>
+                            <td>Description</td>
+                            <td>ubdate</td>
+                            <td>delete</td>
+                            </tr>
+                    </thead>
+                    <tbody id = "tableBody">
+                    </tbody>
+                </table>
+        </section>
+    </main>
+    <script src="crud.js"></script>
+</body>
+
+</html>
